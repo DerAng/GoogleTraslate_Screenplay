@@ -15,6 +15,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 		glue = "stepsdefinitions"	 
 )
 
-public class GoogleTraslateRunner {
+public class GoogleTraslateRunnerTest {
 
 }

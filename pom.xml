@@ -6,8 +6,6 @@
 	<artifactId>GoolgeSuite2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-
-
 	<dependencies>
 
 		<dependency>
@@ -52,11 +50,6 @@
 			<scope>test</scope>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-core <dependency> 
-			<groupId>org.assertj</groupId> <artifactId>assertj-core</artifactId> <version>1.7.0</version> 
-			<scope>test</scope> </dependency> -->
-
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -87,6 +80,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -98,7 +98,17 @@
 					<fork>true</fork>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				
+			</plugin>
 		</plugins>
+
+
+
 
 	</build>
 </project>
