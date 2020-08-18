@@ -10,11 +10,16 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SendKeys;
 import net.serenitybdd.screenplay.actions.Switch;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+import userinterface.GoogleAppsComponent;
 import userinterface.GoogleTraslatePage;
 
 public class TraslateWord implements Task{
 
 	public <T extends Actor> void performAs(T actor) {
+		
+		actor.attemptsTo(WaitUntil.the(GoogleTraslatePage.LANGUAGE_TWO, WebElementStateMatchers.isVisible()));
 		actor.attemptsTo(Click.on(GoogleTraslatePage.LANGUAGE_TWO));
 		actor.attemptsTo(Click.on(GoogleTraslatePage.SELECT_SPANISH));
 		actor.attemptsTo(Click.on(GoogleTraslatePage.LANGUAGE_ONE));
